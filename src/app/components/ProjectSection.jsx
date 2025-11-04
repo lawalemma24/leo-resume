@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 3,
     title: "E-commerce Application",
-    description: "Project 3 description",
+    description: "A Shopping Cart",
     image: "/images/shopping-cart.jpg",
     tag: ["All", "Web"],
     gitUrl: "/",
