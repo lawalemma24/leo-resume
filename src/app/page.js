@@ -1,3 +1,4 @@
+// 'use client';
 import AboutSection from "@/app/components/AboutSection";
 import Footer from "@/app/components/Footer";
 import HeroSection from "@/app/components/HeroSection";
