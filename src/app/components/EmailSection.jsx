@@ -2,8 +2,15 @@ import React from 'react'
 import Link from "next/link";
 import Image from "next/image";
 import { px } from 'framer-motion';
+import {Toast} from 'react-hot-toast';
 
 const EmailSection = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    Toast.success("Message sent successfully!");
+  };
+
   return (
     <div>
         <section
@@ -22,8 +29,8 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
-            <Image src="/images/twitter.png" width={20} height={3} alt="Github Icon" />
+          <Link href="https://github.com/lawalemma24">
+            <Image src="/images/git.png" width={20} height={3} alt="Github Icon" />
           </Link>
           <Link href="https://linkedin.com/in/emmanuel-lawal-37471b283">
             <Image src="/images/linkedin-logo.jpg" height={6} width={20} alt="Linkedin Icon" />
@@ -85,6 +92,7 @@ const EmailSection = () => {
             </div>
             <button
               type="submit"
+              onSubmit={handleSubmit}
               className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
             >
               Send Message
