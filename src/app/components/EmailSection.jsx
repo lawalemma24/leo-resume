@@ -2,49 +2,46 @@
 import React from 'react'
 import Link from "next/link";
 import Image from "next/image";
-import { px } from 'framer-motion';
-import {Toast} from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const EmailSection = () => {
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    Toast.success("Message sent successfully!");
+    toast.success("Message sent successfully!");
+    e.target.reset();
   };
 
   return (
     <div>
-        <section
-      id="contact"
-      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
-    >
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
-      <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">
-          Let&apos;s Connect
-        </h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
-          {" "}
-          I&apos;m currently looking for new opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I&apos;ll
-          try my best to get back to you!
-        </p>
-        <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/lawalemma24">
-            <Image src="/images/git.png" width={20} height={3} alt="Github Icon" />
-          </Link>
-          <Link href="https://linkedin.com/in/emmanuel-lawal-37471b283">
-            <Image src="/images/linkedin-logo.jpg" height={6} width={20} alt="Linkedin Icon" />
-          </Link>
-          <Link href="https://wa.me/+2348146506157">
-          <Image src="/images/whatsapp.webp" height={6} width={20} alt="Whatsapp Icon" />
-          </Link>
+      <section
+        id="contact"
+        className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      >
+        <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
+        <div className="z-10">
+          <h5 className="text-xl font-bold text-white my-2">
+            Let&apos;s Connect
+          </h5>
+          <p className="text-[#ADB7BE] mb-4 max-w-md">
+            I&apos;m currently looking for new opportunities, my inbox is always
+            open. Whether you have a question or just want to say hi, I&apos;ll
+            try my best to get back to you!
+          </p>
+          <div className="socials flex flex-row gap-2">
+            <Link href="https://github.com/lawalemma24">
+              <Image src="/images/git.png" width={20} height={20} alt="Github Icon" />
+            </Link>
+            <Link href="https://linkedin.com/in/emmanuel-lawal-37471b283">
+              <Image src="/images/linkedin-logo.jpg" height={20} width={20} alt="Linkedin Icon" />
+            </Link>
+            <Link href="https://wa.me/+2348146506157">
+              <Image src="/images/whatsapp.webp" height={20} width={20} alt="Whatsapp Icon" />
+            </Link>
+          </div>
         </div>
-      </div>
-      <div>
-       
-       
-          <form className="flex flex-col" >
+        <div>
+          {/* Fixed: onSubmit is on the form element, not the button */}
+          <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
               <label
                 htmlFor="email"
@@ -91,17 +88,16 @@ const EmailSection = () => {
                 placeholder="Let's talk about..."
               />
             </div>
+            {/* Fixed: Removed onSubmit from button, only type="submit" */}
             <button
               type="submit"
-              onSubmit={handleSubmit}
               className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
             >
               Send Message
             </button>
           </form>
-        
-      </div>
-    </section>
+        </div>
+      </section>
     </div>
   )
 }
