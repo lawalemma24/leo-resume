@@ -3,12 +3,34 @@
 @tailwind utilities;
 
 :root {
-    --background: #151A28;
-    --foreground: #ffffff;
+  --background: #151a28;
 }
 
 body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+
+  /* Global Resets for Form Elements */
+  input,
+  textarea,
+  button {
+    font: inherit !important;
+  }
+
+  input,
+  textarea {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  button {
+    border: none !important;
+  }
 }

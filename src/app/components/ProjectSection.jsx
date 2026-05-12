@@ -57,7 +57,8 @@ const projectsData = [
     image: "/images/note-app.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/lawalemma24/Note-App",
-    previewUrl: "https://note-app-front-end-git-url-jaytechs-projects-e325c32a.vercel.app/",
+    previewUrl:
+      "https://note-app-front-end-git-url-jaytechs-projects-e325c32a.vercel.app/",
   },
 ];
 
