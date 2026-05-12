@@ -18,7 +18,6 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
-        <div className="h-64 md:h-80" /> {/* Increased spacing significantly */}
         <EmailSection />
 
       </div>

@@ -13,7 +13,7 @@ const EmailSection = () => {
   };
 
   return (
-    <section id="contact" style={{ marginTop: '160px' }} className="relative w-full py-48 bg-[#151A28] text-white overflow-hidden">
+    <section id="contact" style={{ marginTop: '60px' }} className="relative w-full py-28 bg-[#151A28] text-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="flex items-center gap-4 mb-20 mt-12">
