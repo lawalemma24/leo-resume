@@ -10,18 +10,19 @@ import AchievementSection from "./components/AchievementSection";
 
 export default function Home() {
   return (
-   <main className="flex min-h-screen flex-col bg-[#151A28]">
-    <Navbar />
-    <div className="container  mx-auto px-12" >
-      <HeroSection />
-      <AchievementSection />
-      <AboutSection />
-      <ProjectsSection />
-      <EmailSection />
+    <main className="flex min-h-screen flex-col bg-[#151A28]">
 
-    </div>
-    <Footer />
-   </main>
-    
+      <Navbar />
+      <div className="container  mx-auto px-12" >
+        <HeroSection />
+        <AchievementSection />
+        <AboutSection />
+        <ProjectsSection />
+        <EmailSection />
+
+      </div>
+      <Footer />
+    </main>
+
   );
 }
