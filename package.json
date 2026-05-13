@@ -15,15 +15,8 @@
     "@heroicons/react": "^2.2.0",
     "css": "^3.0.0",
     "framer-motion": "^12.23.24",
-<<<<<<< HEAD
     "next": "^14.0.0",
     "react": "^18.2.0",
-=======
-    "lucide-react": "^1.14.0",
-    "next": "^16.2.6",
-    "postcss": "^8.5.14",
-    "react": "^19.2.6",
->>>>>>> 02d86e3980604375fed2bcc109abdb6f948ced4d
     "react-animated-numbers": "^1.1.1",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.6.0",
