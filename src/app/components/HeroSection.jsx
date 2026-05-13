@@ -39,7 +39,7 @@ const HeroSection = () => {
             </p>
           </div>
 
-          <h1 className="text-white mb-6 text-5xl sm:text-6xl lg:text-[100px] leading-[1.1] font-black uppercase tracking-tight">
+          <h1 className="text-white mb-6 text-4xl sm:text-6xl lg:text-[100px] leading-[1.1] font-black uppercase tracking-tight">
             IT&apos;S ME <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">
               LEO ODUNAYO
@@ -52,7 +52,7 @@ const HeroSection = () => {
           </p>
 
           {/* Stats Section Integrated */}
-          <div className="grid grid-cols-3 gap-8 w-full mt-auto pt-10">
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 w-full mt-auto pt-10">
             <div>
               <h3 className="text-white text-3xl font-bold mb-1">20+</h3>
               <p className="text-gray-500 text-sm uppercase tracking-wider">
@@ -91,7 +91,7 @@ const HeroSection = () => {
             />
 
             {/* CTA Button floating on image area */}
-            <div className="absolute -bottom-6 -left-6 lg:-left-20">
+            <div className="absolute -bottom-6 left-0 sm:-left-6 lg:-left-20">
               <Link
                 href="/#contact"
                 className="flex items-center gap-3 bg-purple-600 text-white px-8 py-5 rounded-3xl "

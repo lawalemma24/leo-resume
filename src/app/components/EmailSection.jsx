@@ -1,8 +1,9 @@
-'use client';
-import React from 'react'
+"use client";
+import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { Mail } from "lucide-react";
 
 const EmailSection = () => {
   const handleSubmit = (e) => {
@@ -12,94 +13,143 @@ const EmailSection = () => {
   };
 
   return (
-    <div>
-      <section
-        id="contact"
-        className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
-      >
-        <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
-        <div className="z-10">
-          <h5 className="text-xl font-bold text-white my-2">
-            Let&apos;s Connect
-          </h5>
-          <p className="text-[#ADB7BE] mb-4 max-w-md">
-            I&apos;m currently looking for new opportunities, my inbox is always
-            open. Whether you have a question or just want to say hi, I&apos;ll
-            try my best to get back to you!
-          </p>
-          <div className="socials flex flex-row gap-2">
-            <Link href="https://github.com/lawalemma24">
-              <Image src="/images/git.png" width={20} height={20} alt="Github Icon" />
+    <section id="contact" style={{ marginTop: '60px' }} className="relative w-full py-28 bg-[#151A28] text-white overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 md:px-12">
+        {/* Header */}
+        <div className="flex items-center gap-4 mb-20 mt-12">
+          <div className="h-[1px] w-16 bg-[#ff7a5c]" />
+          <span className="text-sm font-medium tracking-[0.2em] uppercase text-white/70">
+            Contacts
+          </span>
+        </div>
+
+        {/* Main Content */}
+        <div className="flex flex-col lg:flex-row gap-20 lg:gap-32 mb-28">
+          {/* Left */}
+          <div className="lg:w-1/2 flex flex-col items-start justify-between gap-12">
+            <div className="space-y-2">
+              <h2 className="text-5xl md:text-7xl font-black leading-[0.95] tracking-tight">
+                Have a project?
+              </h2>
+
+              <h2 className="text-5xl md:text-7xl font-black leading-[0.95] tracking-tight text-white/90">
+                Let&apos;s talk!
+              </h2>
+            </div>
+
+            <button
+              onClick={() =>
+                document.getElementById("actual-form-submit")?.click()
+              }
+              className="px-12 py-5 bg-[#ff7a5c] hover:bg-[#e66b4d] text-white text-lg font-semibold tracking-wide transition-all duration-300 hover:translate-y-[-2px]"
+            >
+              Submit
+            </button>
+          </div>
+
+          {/* Right */}
+          <div className="lg:w-1/2 w-full">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-12">
+              {/* Name */}
+              <div className="flex flex-col gap-4">
+                <label className="text-sm uppercase tracking-[0.2em] text-white/50">
+                  Name
+                </label>
+
+                <input
+                  type="text"
+                  required
+                  placeholder="Your name"
+                  className="bg-transparent outline-none border-0 border-b border-white/10 focus:border-[#ff7a5c] py-4 text-lg text-white placeholder:text-white/20 transition-colors duration-300"
+                />
+              </div>
+
+              {/* Email */}
+              <div className="flex flex-col gap-4">
+                <label className="text-sm uppercase tracking-[0.2em] text-white/50">
+                  Email
+                </label>
+
+                <input
+                  type="email"
+                  required
+                  placeholder="you@example.com"
+                  className="bg-transparent outline-none border-0 border-b border-white/10 focus:border-[#ff7a5c] py-4 text-lg text-white placeholder:text-white/20 transition-colors duration-300"
+                />
+              </div>
+
+              {/* Message */}
+              <div className="flex flex-col gap-4">
+                <label className="text-sm uppercase tracking-[0.2em] text-white/50">
+                  Message
+                </label>
+
+                <textarea
+                  rows={4}
+                  required
+                  placeholder="Tell me about your project..."
+                  className="bg-transparent outline-none border-0 border-b border-white/10 focus:border-[#ff7a5c] py-4 text-lg text-white resize-none placeholder:text-white/20 transition-colors duration-300"
+                />
+              </div>
+
+              <button
+                id="actual-form-submit"
+                type="submit"
+                className="hidden"
+              />
+            </form>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="pt-20 border-t border-white/5 flex flex-col items-center gap-12 text-center">
+          <div className="space-y-3">
+            <h3 className="text-3xl font-black tracking-[0.3em]">
+              LEO ODUNAYO
+            </h3>
+
+            <p className="text-sm text-white/40 max-w-md leading-relaxed">
+              Designed with love, all rights reserved for Leo Odunayo.
+            </p>
+          </div>
+
+          {/* Socials */}
+          <div className="flex items-center gap-6 pb-10 flex-wrap justify-center">
+            <Link
+              href="mailto:lawalemma24@gmail.com"
+              className="w-14 h-14 bg-white text-black flex items-center justify-center hover:bg-[#ff7a5c] hover:text-white transition-all duration-300"
+            >
+              <Mail size={22} />
             </Link>
-            <Link href="https://linkedin.com/in/emmanuel-lawal-37471b283">
-              <Image src="/images/linkedin-logo.jpg" height={20} width={20} alt="Linkedin Icon" />
+
+            <Link
+              href="https://github.com/lawalemma24"
+              target="_blank"
+              className="w-14 h-14 bg-white text-black flex items-center justify-center hover:bg-[#ff7a5c] hover:text-white transition-all duration-300"
+            >
+              <FaGithub size={22} />
             </Link>
-            <Link href="https://wa.me/+2348146506157">
-              <Image src="/images/whatsapp.webp" height={20} width={20} alt="Whatsapp Icon" />
+
+            <Link
+              href="https://linkedin.com/in/emmanuel-lawal-37471b283"
+              target="_blank"
+              className="w-14 h-14 bg-white text-black flex items-center justify-center hover:bg-[#ff7a5c] hover:text-white transition-all duration-300"
+            >
+              <FaLinkedin size={22} />
+            </Link>
+
+            <Link
+              href="https://wa.me/+2348146506157"
+              target="_blank"
+              className="w-14 h-14 bg-white text-black flex items-center justify-center hover:bg-[#ff7a5c] hover:text-white transition-all duration-300"
+            >
+              <FaWhatsapp size={22} />
             </Link>
           </div>
         </div>
-        <div>
-          {/* Fixed: onSubmit is on the form element, not the button */}
-          <form className="flex flex-col" onSubmit={handleSubmit}>
-            <div className="mb-6">
-              <label
-                htmlFor="email"
-                className="text-white block mb-2 text-sm font-medium"
-              >
-                Your email
-              </label>
-              <input
-                name="email"
-                type="email"
-                id="email"
-                required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="subject"
-                className="text-white block text-sm mb-2 font-medium"
-              >
-                Subject
-              </label>
-              <input
-                name="subject"
-                type="text"
-                id="subject"
-                required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hi"
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="text-white block text-sm mb-2 font-medium"
-              >
-                Message
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Let's talk about..."
-              />
-            </div>
-            {/* Fixed: Removed onSubmit from button, only type="submit" */}
-            <button
-              type="submit"
-              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-      </section>
-    </div>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default EmailSection
+export default EmailSection;
