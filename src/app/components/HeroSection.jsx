@@ -66,7 +66,7 @@ const HeroSection = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-white text-3xl font-bold mb-1">2+</h3>
+              <h3 className="text-white text-3xl font-bold mb-1">3+</h3>
               <p className="text-gray-500 text-sm uppercase tracking-wider">
                 Years Experience
               </p>
