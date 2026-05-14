@@ -32,33 +32,25 @@ const projectsData = [
     gitUrl: "https://github.com/lawalemma24/ShoppingCart",
     previewUrl: "https://ecommerce-app-gray-two-91.vercel.app",
   },
+
   {
     id: 4,
-    title: "A shopping cart website",
-    description: "A mobile responsive shopping cart website",
-    image: "/images/shopping-cart.jpg",
-    tag: ["All", "Mobile"],
-    gitUrl: "https://shopping-cart-blond-five-85.vercel.app",
-    previewUrl: "https://shopping-cart-blond-five-85.vercel.app",
-  },
-  {
-    id: 5,
     title: "Url Shortener Application",
     description: "Authentication and CRUD operations",
     image: "/images/shortify-app.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/lawalemma24/UrlWebsite.git",
-    previewUrl: "https://url-website-p59k.vercel.app",
+    previewUrl: "https://url-frontend-zeta.vercel.app/",
   },
+
   {
-    id: 6,
-    title: "Note Taking Application",
-    description: "A simple note taking app with CRUD operations",
-    image: "/images/note-app.jpg",
+    id: 5,
+    title: "Restaurant Application",
+    description: "A restaurant website with a menu and a reservation system",
+    image: "/images/realova.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/lawalemma24/Note-App",
-    previewUrl:
-      "https://note-app-front-end-git-url-jaytechs-projects-e325c32a.vercel.app/",
+    gitUrl: "https://github.com/lawalemma24/UrlWebsite.git",
+    previewUrl: "https://realova.vercel.app/",
   },
 ];
 
