@@ -49,8 +49,9 @@ const projectsData = [
     description: "A restaurant website with a menu and a reservation system",
     image: "/images/realova.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/lawalemma24/UrlWebsite.git",
-    previewUrl: "https://realova.vercel.app/",
+    gitUrl: "https://github.com/lawalemma24/Note-App",
+    previewUrl:
+      "https://note-app-front-end-git-url-jaytechs-projects-e325c32a.vercel.app/",
   },
 ];
 
@@ -59,9 +60,12 @@ const ProjectsSection = () => {
   const ref = useRef(null);
 
   // ✅ FIX: Memoize options to prevent re-creation
-  const viewOptions = useMemo(() => ({
-    once: true
-  }), []);
+  const viewOptions = useMemo(
+    () => ({
+      once: true,
+    }),
+    []
+  );
 
   const isInView = useInView(ref, viewOptions);
 
@@ -73,10 +77,13 @@ const ProjectsSection = () => {
     project.tag.includes(tag)
   );
 
-  const cardVariants = useMemo(() => ({
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-  }), []);
+  const cardVariants = useMemo(
+    () => ({
+      initial: { y: 50, opacity: 0 },
+      animate: { y: 0, opacity: 1 },
+    }),
+    []
+  );
 
   return (
     <section id="projects" className="py-16 md:py-24 px-4 md:px-8">
