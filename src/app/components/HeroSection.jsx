@@ -34,7 +34,7 @@ const HeroSection = () => {
               ))}
             </div>
             <p className="text-gray-300 text-sm font-medium">
-              <span className="text-white font-bold">120+</span> Total Satisfied
+              <span className="text-white font-bold">150+</span> Total Satisfied
               Client
             </p>
           </div>
