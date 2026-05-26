@@ -12,6 +12,8 @@ const TAB_DATA = [
       <div className="flex flex-wrap gap-4 mt-4">
         {[
           { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+          // { name: "ASP.Net", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aspnet/aspnet-original.svg" },
+          { name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
           { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
           { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
           { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
