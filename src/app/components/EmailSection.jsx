@@ -131,7 +131,7 @@ const EmailSection = () => {
             </Link>
 
             <Link
-              href="https://linkedin.com/in/emmanuel-lawal-37471b283"
+              href="https://linkedin.com/in/emmanuel-lawal-14655b198"
               target="_blank"
               className="w-14 h-14 bg-white text-black flex items-center justify-center hover:bg-[#ff7a5c] hover:text-white transition-all duration-300"
             >
